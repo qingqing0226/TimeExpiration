@@ -1,0 +1,13 @@
+<h1>Hello candidate.</h1>
+<p>The instructions for your assignment are stated below</p>
+<ul>
+  <li>Use a datepicker to select an expiration date. The selected date should then be saved in a file located in the software (.exe file location) folder.</li>
+  <li>Add a button on the navigation menu. The button shall call a function which retrieves the stored expiration date and if it´s later than the current date navigate the user to a new page</li>
+</ul>
+<p>Things taken in consideration</p>
+<ul>
+  <li><strong>Tamperness protection</strong>. Is the expiration date readable or alterable by the user? Can the current date or the expiration date be tampered with?</li>
+  <li><strong>Design pattern</strong>. Is the code well structured? Is it clean?</li>
+  <li><strong>User interface</strong>. Does the user interface feel modern and responsive?</li>
+</ul>
+<em>Hints: Encryption, Decryption, Date from the internet, License file exists? Require internet connection?</em>
