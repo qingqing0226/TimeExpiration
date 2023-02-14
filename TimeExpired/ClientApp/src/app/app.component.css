@@ -1,5 +1,5 @@
 
-mat-form-field {
+mat-form-field, .message, button {
     margin: 2rem;
 
 }

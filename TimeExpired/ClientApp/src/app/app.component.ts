@@ -16,16 +16,13 @@ export class AppComponent {
   constructor(private timeservice: TimeLicensingService){}
 
   dateChange(e: MatDatepickerInputEvent<Date>){
-    console.log(e.value?.toLocaleDateString())
     const date = e.value? e.value?.toLocaleDateString() : '';
-
     this.timeservice.postExpirationDate(date).subscribe(res => this.postData = res);
     if(this.postData) {
       console.log('Post response' + this.postData);
     }
 
     if(new Date(date).getTime() - Date.now() > 0) {
-      console.log("Expiration date is later than current date.")
       this.message = "Expiration date is later than current date.";
     }
 

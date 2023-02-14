@@ -4,11 +4,15 @@
     <router-outlet></router-outlet>
   </div>
   <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Select an expiration date</mat-label>
+    <div>Select an expiration date</div>
+    <mat-label></mat-label>
+    <br>
     <input matInput [matDatepicker]="picker" (dateChange)="dateChange($event)">
     <mat-hint>MM/DD/YYYY</mat-hint>
+    <br>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
-  <button mat-raised-button (click)="picker.open()">Open</button>
-  <div>{{message}}</div>
+  <br>
+  <button mat-raised-button (click)="picker.open()">Open Calendar</button>
+  <div class="message">{{message}}</div>
 </body>
