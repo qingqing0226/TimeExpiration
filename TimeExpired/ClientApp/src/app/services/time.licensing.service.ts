@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { environment } from "../../environments/environment";
@@ -9,10 +9,13 @@ import { environment } from "../../environments/environment";
 
 export class TimeLicensingService {
   constructor(private http: HttpClient) { }
-  private controllerUrl = environment.apiServer + '/timelicensing';
 
-  getExpirationDate(): Observable<Date> {
-    return this.http.get<Date>(this.controllerUrl + "/getexp").pipe();
+  getExpirationDate(): Observable<String> {
+    return this.http.get<String>("http://localhost:8080/api/date");
+  }
+
+  postExpirationDate(date: String): Observable<String> {
+    return this.http.post<String>("http://localhost:8080/api/date", date);
   }
 
 }

@@ -3,4 +3,12 @@
   <div class="container">
     <router-outlet></router-outlet>
   </div>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Select an expiration date</mat-label>
+    <input matInput [matDatepicker]="picker" (dateChange)="dateChange($event)">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button (click)="picker.open()">Open</button>
+  <div>{{message}}</div>
 </body>
